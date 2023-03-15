@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>
+        <title>Output data</title>
+    </h:head>
+    <h:body>
+        <h1>Output data</h1>
+        <h:form>
+            <h:panelGrid>
+                <h:outputLabel value="Left border" for="leftBorder"/>
+                <h:outputLabel value="#{controller.lbModule.leftBorder}" id="leftBorder"/>
+                <h:outputLabel value="Right border" for="rightBorder"/>
+                <h:outputLabel value="#{controller.lbModule.rightBorder}" id="rightBorder"/>
+                <h:outputLabel value="Step" for="step"/>
+                <h:outputLabel value="#{controller.lbModule.step}" id="step"/>
+                <h:outputLabel value="Step Number" for="stepNumb"/>
+                <h:outputLabel value="#{controller.lbModule.iterateNumb()}" id="stepNumb"/>
+                <h:outputLabel value="Max value of f(x)" for="maxValue"/>
+                <h:outputLabel value="#{controller.maxY()}" id="maxValue"/>
+                <h:outputLabel value="x for max f(x)" for="maxX"/>
+                <h:outputLabel value="#{controller.maxX()}" id="maxX"/>
+                <h:outputLabel value="Index of max f(x)" for="maxIndex"/>
+                <h:outputLabel value="#{controller.lbModule.findIndexOfMaxY()}" id="maxIndex"/>
+                <h:outputLabel value="Min value of f(x)" for="minValue"/>
+                <h:outputLabel value="#{controller.minY()}" id="minValue"/>
+                <h:outputLabel value="x for min f(x)" for="minX"/>
+                <h:outputLabel value="#{controller.minX()}" id="minX"/>
+                <h:outputLabel value="Index of min f(x)" for="minIndex"/>
+                <h:outputLabel value="#{controller.lbModule.findIndexOfMinY()}" id="minIndex"/>
+                <h:outputLabel value="Summ f(x)" for="summ"/>
+                <h:outputLabel value="#{controller.lbModule.summY()}" id="summ"/>
+                <h:outputLabel value="Avarage f(x)" for="avarage"/>
+                <h:outputLabel value="#{controller.lbModule.middleY()}" id="avarage"/>
+            </h:panelGrid>
+                <h:commandButton value="Input again" action="inputD"/>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
